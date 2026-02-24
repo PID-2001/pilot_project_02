@@ -6,22 +6,926 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tailwind CSS Project</title>
+    <title>XTRA</title>
+    <link rel="icon" type="image/png" href="imgs/logo-mark-1.png">
 
-    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
 
-<body class="bg-gray-400">
+<body class="bg-gray-100 font-sans">
 
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center hero-bg">
-     
-        
+    <div id="sticky-header"
+        class="fixed top-0 left-0 w-full bg-[#ffde59] shadow-lg z-[100] transition-transform duration-300">
+        <div class="container mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="flex items-end space-x-1 h-6">
+                <img src="imgs/logo-mark-2.png" class="w-12" alt="logo">
+                </div>
+            </div>
+
+            <nav class="hidden lg:flex space-x-6 font-bold text-[#0b2b5b] text-xs tracking-wide uppercase">
+                <a href="#" class="hover:text-black transition border-b-2 border-[#0b2b5b] pb-1">Home</a>
+                <a href="#" class="hover:text-black transition">About</a>
+                <a href="#" class="hover:text-black transition">Services</a>
+                <a href="#" class="hover:text-black transition">Blog</a>
+                <a href="#" class="hover:text-black transition">Projects</a>
+                <a href="#" class="hover:text-black transition">Shop</a>
+                <div class="relative group">
+                    <button class="flex items-center hover:text-black transition">Pages <i
+                            class="fa-solid fa-chevron-down ml-1 text-[10px]"></i></button>
+                </div>
+                <a href="#" class="hover:text-black transition">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-5 text-[#0b2b5b]">
+                <a href="#" class="hover:text-black transition"><i class="fa-solid fa-magnifying-glass text-lg"></i></a>
+                <a href="#" class="relative hover:text-black transition">
+                    <i class="fa-solid fa-cart-shopping text-lg"></i>
+                    <span
+                        class="absolute -top-2 -right-2 bg-[#0b2b5b] text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-sm">0</span>
+                </a>
+                <a href="#" class="hover:text-black transition"><i class="fa-solid fa-bars text-xl"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header class="absolute top-0 left-0 w-full z-50">
+
+        <div class="relative mt-5">
+
+            <div
+                class="absolute top-0 right-0 h-full bg-[#0b2b5b] slant-left-blue w-[calc(100%-0px)] md:w-[95%] lg:w-[95%] z-0">
+            </div>
+
+            <div
+                class="container mx-auto flex flex-row justify-between items-center px-4 md:px-10 py-6 relative z-10 text-white">
+                <div class="flex items-center space-x-3 mb-0 lg:mb-0 ml-0 sm:ml-0 md:ml-0 lg:ml-16 self-center">
+                    <div class="flex items-end space-x-1 h-8">
+                        <img src="imgs/logo-mark-1.png" class="w-12" alt="logo">
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold leading-none">XTRA</h1>
+                        <p class="text-xs tracking-wider text-gray-300">INDUSTRIAL</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-center space-x-6 md:space-x-8 text-sm w-full lg:w-auto justify-end">
+                    <div class="flex items-center space-x-3">
+                        <div
+                            class="w-10 h-10 border border-yellow-400 rounded-full flex items-center justify-center text-yellow-400">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="hidden lg:block">
+                            <p class="text-gray-400 text-xs">Have any questions?</p>
+                            <p class="font-bold">+1 (818) 333 44 55</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div
+                            class="w-10 h-10 border border-yellow-400 rounded-full flex items-center justify-center text-yellow-400">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="hidden lg:block">
+                            <p class="text-gray-400 text-xs">Our office address</p>
+                            <p class="font-bold">22345, King St, California</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative h-16 mt-2">
+            <div class="absolute top-0 left-0 h-full w-full lg:w-[95%] bg-[#ffde59] slant-right-yellow shadow-lg z-0">
+            </div>
+
+            <div class="container mx-auto px-6 h-full flex justify-between items-center relative z-10">
+                <div class="hidden lg:flex items-center space-x-4 text-[#0b2b5b]">
+                    <a href="#" class="hover:text-black transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-black transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-black transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:text-black transition"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+
+                <nav
+                    class="hidden lg:flex space-x-6 xl:space-x-8 font-bold text-[#0b2b5b] text-sm tracking-wide uppercase">
+                    <a href="#" class="hover:text-black transition">Home</a>
+                    <a href="#" class="hover:text-black transition">About</a>
+                    <a href="#" class="hover:text-black transition">Services</a>
+                    <a href="#" class="hover:text-black transition">Blog</a>
+                    <a href="#" class="hover:text-black transition">Projects</a>
+                    <a href="#" class="hover:text-black transition">Shop</a>
+                    <div class="relative group">
+                        <button class="flex items-center hover:text-black transition">Pages <i
+                                class="fa-solid fa-chevron-down ml-1 text-xs"></i></button>
+                    </div>
+                    <a href="#" class="hover:text-black transition">Contact</a>
+                </nav>
+
+                <div class="lg:hidden flex items-center text-[#0b2b5b]">
+                    <span class="font-bold mr-2">MENU</span>
+                </div>
+
+                <div class="flex items-center space-x-5 text-[#0b2b5b] ml-auto lg:ml-0 md:mr-16 lg:mr-32">
+                    <a href="#" class="hover:text-black transition"><i
+                            class="fa-solid fa-magnifying-glass text-lg"></i></a>
+                    <a href="#" class="relative hover:text-black transition">
+                        <i class="fa-solid fa-cart-shopping text-lg"></i>
+                        <span
+                            class="absolute -top-2 -right-2 bg-[#0b2b5b] text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-sm">0</span>
+                    </a>
+                    <a href="#" class="hover:text-black transition"><i class="fa-solid fa-bars text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="relative h-screen flex items-center hero-bg">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="max-w-4xl mt-20">
+                <h1 class="text-white text-6xl md:text-8xl font-bold uppercase mb-2 drop-shadow-md">INDUSTRIAL</h1>
+                <h2 class="text-[#ffde59] text-2xl md:text-3xl font-bold mb-6 drop-shadow-md">Normal Speed Meets Every
+                    Need</h2>
+                <p class="text-white text-sm md:text-base font-normal mb-10 max-w-xl leading-relaxed drop-shadow-md">
+                    When It Seems There is Never Enough Time to Do Things the Right Way - Remember There is Always
+                    Enough Time for an Investigation
+                </p>
+                <a href="#"
+                    class="inline-block bg-white text-[#0b2b5b] font-bold py-3 px-8 rounded-sm shadow-lg hover:bg-gray-100 transition duration-300 text-sm md:text-base uppercase tracking-wide">
+                    Get a Free Quote
+                </a>
+            </div>
+        </div>
     </section>
+
+    <section class="bg-[#0b2b5b] pb-16 lg:pb-24 pt-10 lg:pt-0 relative z-20">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="flex flex-col lg:flex-row gap-12">
+
+                <div class="w-full lg:w-1/3 bg-[#ffde59] p-10 shadow-xl lg:-mt-24 relative z-30">
+                    <p class="text-xs text-gray-700 tracking-widest uppercase mb-4">OUR AIM - NO ACCIDENTS</p>
+                    <h2 class="text-[#0b2b5b] text-3xl font-bold uppercase mb-4 leading-tight">SAFETY IS SUCCESS BY
+                        PURPOSE NOT ACCIDENT</h2>
+                    <div class="w-12 h-1 bg-[#0b2b5b] mb-8"></div>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Never think working safe is in vain when it could save a life time of pain
+                    </p>
+                </div>
+
+                <div class="w-full lg:w-2/3 lg:pt-16">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+
+                        <div class="flex items-start space-x-4">
+                            <div class="text-[#ffde59] text-5xl">
+                                <img src="imgs/brain.png" class="w-20" alt="brain">
+                            </div>
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Industrial Ideas</h3>
+                                <div class="w-full h-0.5 bg-gray-600 mb-2"></div>
+                                <p class="text-gray-400 text-sm">Ignoring a warning can cause much mourning</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="text-[#ffde59] text-5xl">
+                                <img src="imgs/worker-100x100.png" class="w-20" alt="worker">
+                            </div>
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Expert Engineers</h3>
+                                <div class="w-full h-0.5 bg-gray-600 mb-2"></div>
+                                <p class="text-gray-400 text-sm">If you're going to be stupid, you have to be tough!</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="text-[#ffde59] text-5xl">
+                                <img src="imgs/robot-arm-100x100.png" class="w-20" alt="robot-arm">
+                            </div>
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Modern Equipment</h3>
+                                <div class="w-full h-0.5 bg-gray-600 mb-2"></div>
+                                <p class="text-gray-400 text-sm">Life did not begin by accident. don't end it as one</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="text-[#ffde59] text-5xl">
+                                <img src="imgs/help-100x100.png" class="w-20" alt="help">
+                            </div>
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Projects Support</h3>
+                                <div class="w-full h-0.5 bg-gray-600 mb-2"></div>
+                                <p class="text-gray-400 text-sm">Make your plant the best, safer than all the rest</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-20 lg:py-24">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 text-center">
+            <div class="flex items-end justify-center space-x-1 mb-6">
+                <img src="imgs/logo-mark-1.png" class="w-20" alt="logo">
+            </div>
+
+            <p class="text-[#0b2b5b] text-sm font-bold uppercase tracking-widest mb-4">Our Mission</p>
+
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-black max-w-5xl mx-auto leading-tight mb-4">
+                Industrial engineering, engineering dealing with the optimization of complex industrial processes or
+                systems
+            </h2>
+
+            <p class="text-gray-400 text-sm md:text-base">
+                Safety records don't happen by accident
+            </p>
+        </div>
+    </section>
+
+    <section class="bg-[#ffde59] py-16">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-0">
+                <div class="text-center lg:border-r border-gray-400 last:border-0 py-4 group cursor-pointer">
+                    <h3 class="text-5xl font-light text-[#0b2b5b] mb-2 tracking-tighter">67<span
+                            class="text-3xl align-top ml-1">+</span></h3>
+                    <p
+                        class="inline-block text-[10px] font-black uppercase tracking-widest text-black group-hover:bg-[#0b2b5b] group-hover:text-[#ffde59] transition-all duration-300 px-6 py-2">
+                        Years of Experience</p>
+                </div>
+                <div class="text-center lg:border-r border-gray-400 last:border-0 py-4 group cursor-pointer">
+                    <h3 class="text-5xl font-light text-[#0b2b5b] mb-2 tracking-tighter">25<span
+                            class="text-3xl align-top ml-1 lowercase">k</span></h3>
+                    <p
+                        class="inline-block text-[10px] font-black uppercase tracking-widest text-black group-hover:bg-[#0b2b5b] group-hover:text-[#ffde59] transition-all duration-300 px-6 py-2">
+                        Projects Done</p>
+                </div>
+                <div class="text-center lg:border-r border-gray-400 last:border-0 py-4 group cursor-pointer">
+                    <h3 class="text-5xl font-light text-[#0b2b5b] mb-2 tracking-tighter">99<span
+                            class="text-3xl align-top ml-1">+</span></h3>
+                    <p
+                        class="inline-block text-[10px] font-black uppercase tracking-widest text-black group-hover:bg-[#0b2b5b] group-hover:text-[#ffde59] transition-all duration-300 px-6 py-2">
+                        Awards Winning</p>
+                </div>
+                <div class="text-center lg:border-r border-gray-400 last:border-0 py-4 group cursor-pointer">
+                    <h3 class="text-5xl font-light text-[#0b2b5b] mb-2 tracking-tighter">78</h3>
+                    <p
+                        class="inline-block text-[10px] font-black uppercase tracking-widest text-black group-hover:bg-[#0b2b5b] group-hover:text-[#ffde59] transition-all duration-300 px-6 py-2">
+                        Modern Systems</p>
+                </div>
+                <div class="text-center lg:border-r border-gray-400 last:border-0 py-4 group cursor-pointer">
+                    <h3 class="text-5xl font-light text-[#0b2b5b] mb-2 tracking-tighter">13<span
+                            class="text-3xl align-top ml-1 lowercase">k</span></h3>
+                    <p
+                        class="inline-block text-[10px] font-black uppercase tracking-widest text-black group-hover:bg-[#0b2b5b] group-hover:text-[#ffde59] transition-all duration-300 px-6 py-2">
+                        Expert Workers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="relative bg-[url('imgs/psec-bg.jpg')] bg-cover bg-no-repeat text-white overflow-hidden min-h-[700px] flex items-center">
+        <div class="absolute inset-0 bg-black/60 lg:hidden z-0"></div>
+
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+                <div class="hidden lg:block h-full"></div>
+
+                <div class="py-16 lg:py-24 lg:pl-12">
+                    <div class="flex items-end space-x-1.5 mb-8">
+                        <img src="imgs/logo-mark-1.png" class="w-20" alt="logo">
+                    </div>
+
+                    <p class="text-gray-400 text-[14px] tracking-widest mb-4">Follow traffic rules -
+                        Save your future</p>
+
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                        About Our <span class="text-[#ffde59]">Industrial Company</span>
+                    </h2>
+
+                    <p class="text-gray-400 text-sm md:text-base mb-12 leading-relaxed max-w-xl">
+                        We are truly your 'One Source' and it's our job to get you on operational and back on-line fast.
+                        Our list of services is comprehensive, and it features:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-10">
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-11 h-11 bg-[#ffde59] rounded-full flex items-center justify-center text-[#111111] shrink-0">
+                                <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base leading-tight">Construction</h4>
+                                <p class="text-gray-500 text-[10px] uppercase tracking-wider mt-1">Expert & modern
+                                    systems</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-11 h-11 bg-[#ffde59] rounded-full flex items-center justify-center text-[#111111] shrink-0">
+                                <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base leading-tight">Environmental</h4>
+                                <p class="text-gray-500 text-[10px] uppercase tracking-wider mt-1">Waste management</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-11 h-11 bg-[#ffde59] rounded-full flex items-center justify-center text-[#111111] shrink-0">
+                                <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base leading-tight">Machinery</h4>
+                                <p class="text-gray-500 text-[10px] uppercase tracking-wider mt-1">Equipment relocation
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-11 h-11 bg-[#ffde59] rounded-full flex items-center justify-center text-[#111111] shrink-0">
+                                <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base leading-tight">Electrical Service</h4>
+                                <p class="text-gray-500 text-[10px] uppercase tracking-wider mt-1">Electrical supply
+                                    stores</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-11 h-11 bg-[#ffde59] rounded-full flex items-center justify-center text-[#111111] shrink-0">
+                                <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base leading-tight">Predictive</h4>
+                                <p class="text-gray-500 text-[10px] uppercase tracking-wider mt-1">Asset optimization
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-11 h-11 bg-[#ffde59] rounded-full flex items-center justify-center text-[#111111] shrink-0">
+                                <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base leading-tight">Weld, Fabrication</h4>
+                                <p class="text-gray-500 text-[10px] uppercase tracking-wider mt-1">Machine shop work</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-11 h-11 bg-[#ffde59] rounded-full flex items-center justify-center text-[#111111] shrink-0">
+                                <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base leading-tight">Engineering</h4>
+                                <p class="text-gray-500 text-[10px] uppercase tracking-wider mt-1">Cognizant technology
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-11 h-11 bg-[#ffde59] rounded-full flex items-center justify-center text-[#111111] shrink-0">
+                                <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-base leading-tight">HVAC Technicians</h4>
+                                <p class="text-gray-500 text-[10px] uppercase tracking-wider mt-1">Have largest Network
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white mt-5 overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+
+                <div class="w-full lg:w-1/2">
+                    <div class="flex items-end space-x-1.5 mb-8">
+                        <img src="imgs/logo-mark-1.png" class="w-20" alt="logo">
+                    </div>
+
+                    <p class="text-[10px] font-bold tracking-widest uppercase mb-4">
+                        <span class="text-[#0b2b5b]">Jack Cage</span>
+                        <span class="text-gray-400 mx-1">-</span>
+                        <span class="text-gray-400">Engineer</span>
+                    </p>
+
+                    <h2 class="text-4xl md:text-5xl font-bold text-[#0b2b5b] mb-12 leading-tight">
+                        Dare to <span class="text-[#0b2b5b]">Be Aware</span>
+                    </h2>
+
+                    <div class="relative pl-12 pr-12">
+                        <div class="absolute -top-4 -left-2 text-[#ffde59] opacity-60 text-7xl font-serif leading-none">
+                            "
+                        </div>
+                        <p class="text-gray-500 text-base md:text-lg leading-relaxed relative z-10 italic">
+                            Because no plant can afford an inefficient operation or unplanned downtime, Marshall
+                            Industrial Technologies' Mechanical Services Group focuses on keeping your operation running
+                            at peak performance.
+                        </p>
+                        <div
+                            class="absolute -bottom-16 right-4 text-[#ffde59] opacity-60 text-7xl font-serif leading-none rotate-180">
+                            "
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 relative flex justify-center lg:justify-end">
+                    <div class="relative z-10">
+                        <img src="imgs/worker-man-1.jpg" alt="Worker" class="w-[450px] h-auto ">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#0b2b5b] py-20 lg:py-24 overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+
+            <div class="flex flex-col items-center text-center mb-20">
+                <div class="flex items-end space-x-1.5 mb-6">
+                    <img src="imgs/logo-mark-1.png" class="w-20" alt="logo">
+                </div>
+                <p class="text-gray-300 text-xs font-semibold uppercase tracking-widest mb-4">Have another day - By
+                    being safe today!</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+                    A <span class="text-[#ffde59]">Good Quality</span> Is Not Accidental
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8">
+
+                <div class="relative pt-8 group">
+                    <div
+                        class="absolute top-0 left-6 w-16 h-16 bg-[#ffde59] flex items-center justify-center text-[#111111] z-20">
+                        <img src="imgs/factory-100x100.png" class="w-20 p-2" alt="factory">
+                    </div>
+                    <div
+                        class="border border-white/20 p-10 pt-16 min-h-[300px] flex flex-col items-start relative overflow-hidden transition-all duration-300 group-hover:border-[#ffde59]/50">
+                        <h3 class="text-white text-xl font-bold mb-6">Industrial Factories</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-12">
+                            Wear an approved bike helmet when you go bike riding.
+                        </p>
+                        <a href="#"
+                            class="absolute bottom-0 right-0 bg-[#ffde59] text-[#0b2b5b] px-5 py-3 flex items-center space-x-2 font-bold text-[10px] uppercase tracking-wider transition-transform duration-300 transform translate-y-0 hover:-translate-y-1">
+                            <span>Learn more</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative pt-8 group">
+                    <div
+                        class="absolute top-0 left-6 w-16 h-16 bg-[#ffde59] flex items-center justify-center text-[#111111] z-20">
+                        <img src="imgs/wrench-100x100.png" class="w-20 p-2" alt="hand-fist">
+                    </div>
+                    <div
+                        class="border border-white/20 p-10 pt-16 min-h-[300px] flex flex-col items-start relative overflow-hidden transition-all duration-300 group-hover:border-[#ffde59]/50">
+                        <h3 class="text-white text-xl font-bold mb-6">Experienced Workers</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-12">
+                            The door to safety swings on hinges of common sense.
+                        </p>
+                        <a href="#"
+                            class="absolute bottom-0 right-0 bg-[#ffde59] text-[#0b2b5b] px-5 py-3 flex items-center space-x-2 font-bold text-[10px] uppercase tracking-wider transition-transform duration-300 transform translate-y-0 hover:-translate-y-1">
+                            <span>Learn more</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative pt-8 group">
+                    <div
+                        class="absolute top-0 left-6 w-16 h-16 bg-[#ffde59] flex items-center justify-center text-[#111111] z-20">
+                        <img src="imgs/network-100x100.png" class="w-20 p-2" alt="network">
+                    </div>
+                    <div
+                        class="border border-white/20 p-10 pt-16 min-h-[300px] flex flex-col items-start relative overflow-hidden transition-all duration-300 group-hover:border-[#ffde59]/50">
+                        <h3 class="text-white text-xl font-bold mb-6">Industrial Networking</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-12">
+                            You get what you inspect, not what you expect in systems.
+                        </p>
+                        <a href="#"
+                            class="absolute bottom-0 right-0 bg-[#ffde59] text-[#0b2b5b] px-5 py-3 flex items-center space-x-2 font-bold text-[10px] uppercase tracking-wider transition-transform duration-300 transform translate-y-0 hover:-translate-y-1">
+                            <span>Learn more</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-24 overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+
+                <div class="w-full lg:w-1/2 relative flex justify-center lg:justify-start">
+                    <div class="absolute -bottom-10 -left-10 w-[450px] h-[450px] bg-[#ffde59] z-0 hidden md:block">
+                    </div>
+
+                    <div class="relative z-10 shadow-2xl">
+                        <img src="imgs/man-worker.jpg" alt="Production worker" class="w-[450px] h-auto object-cover">
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 flex flex-col space-y-2">
+
+                    <div class="border border-[#0b2b5b] transition-all duration-300">
+                        <div class="flex justify-between items-center px-6 py-5 cursor-pointer">
+                            <h4 class="text-[#0b2b5b] font-bold text-sm uppercase tracking-wide">Entire Production Line
+                                Installation</h4>
+                            <i class="fa-solid fa-chevron-up text-[#0b2b5b] text-xs"></i>
+                        </div>
+                        <div class="px-6 pb-6 pt-2 border-t border-gray-100">
+                            <p class="text-gray-500 text-[13px] leading-relaxed">
+                                We can assist you in the modernization of your facility, the installation and repair of
+                                your equipment, and general and preventive plant maintenance and industrial systems for
+                                modern works.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#0b2b5b] transition-all duration-300 hover:bg-[#0b2b5b]/90">
+                        <div class="flex justify-between items-center px-6 py-5 cursor-pointer">
+                            <h4 class="text-white font-bold text-sm uppercase tracking-wide">Small & Large Component
+                                Fabrication</h4>
+                            <i class="fa-solid fa-chevron-down text-white text-xs"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#0b2b5b] transition-all duration-300 hover:bg-[#0b2b5b]/90">
+                        <div class="flex justify-between items-center px-6 py-5 cursor-pointer">
+                            <h4 class="text-white font-bold text-sm uppercase tracking-wide">Hard Facing & Corrosion
+                                Resistant Overlay</h4>
+                            <i class="fa-solid fa-chevron-down text-white text-xs"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#0b2b5b] transition-all duration-300 hover:bg-[#0b2b5b]/90">
+                        <div class="flex justify-between items-center px-6 py-5 cursor-pointer">
+                            <h4 class="text-white font-bold text-sm uppercase tracking-wide">Pipe fitting Complete
+                                Piping Systems</h4>
+                            <i class="fa-solid fa-chevron-down text-white text-xs"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-24 overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="flex items-end space-x-1.5 mb-6">
+                    <img src="imgs/logo-mark-1.png" class="w-20" alt="logo">
+                </div>
+                <p class="text-gray-400 text-[11px] font-semibold uppercase tracking-widest mb-4">Check out our news and
+                    updates</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-black leading-tight">
+                    <span class="text-[#0b2b5b]">Latest News</span> and Updates
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8">
+
+                <div class="flex flex-col items-center">
+                    <div class="relative w-full aspect-[4/4] overflow-hidden group cursor-pointer">
+                        <img src="imgs/p8.jpg" alt="Stock Changes"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-[#ffde59]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                            <i class="fa-solid fa-link text-[#0b2b5b] text-3xl"></i>
+                        </div>
+                        <div
+                            class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] bg-white group-hover:bg-[#0b2b5b] shadow-xl p-6 text-center transform transition-all duration-300 group-hover:-translate-y-2 z-20">
+                            <h3
+                                class="text-black group-hover:text-white font-bold text-sm leading-snug transition-colors duration-300">
+                                How to Be Ahead of Stock Changes</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-10">1 JUNE 2024</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="relative w-full aspect-[4/4] overflow-hidden group cursor-pointer">
+                        <img src="imgs/p9.jpg" alt="Online Reputation"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-[#ffde59]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                            <i class="fa-solid fa-link text-[#0b2b5b] text-3xl"></i>
+                        </div>
+                        <div
+                            class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] bg-white group-hover:bg-[#0b2b5b] shadow-xl p-6 text-center transform transition-all duration-300 group-hover:-translate-y-2 z-20">
+                            <h3
+                                class="text-black group-hover:text-white font-bold text-sm leading-snug transition-colors duration-300">
+                                Online Reputation And Management</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-10">1 JUNE 2024</p>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="relative w-full aspect-[4/4] overflow-hidden group cursor-pointer">
+                        <img src="imgs/p10.jpg" alt="Project Forward"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div
+                            class="absolute inset-0 bg-[#ffde59]/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                            <i class="fa-solid fa-link text-[#0b2b5b] text-3xl"></i>
+                        </div>
+                        <div
+                            class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] bg-white group-hover:bg-[#0b2b5b] shadow-xl p-6 text-center transform transition-all duration-300 group-hover:-translate-y-2 z-20">
+                            <h3
+                                class="text-black group-hover:text-white font-bold text-sm leading-snug transition-colors duration-300">
+                                Tips To Move Your Project More Forward
+                            </h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-10">1 JUNE 2024</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#0b2b5b] py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+
+            <div class="absolute inset-y-0 left-6 md:left-12 flex items-center z-20">
+                <button
+                    class="w-10 h-16 bg-[#ffde59] flex items-center justify-center text-[#111111] hover:bg-[#ffde59]/90 transition-colors">
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                </button>
+            </div>
+            <div class="absolute inset-y-0 right-6 md:right-12 flex items-center z-20">
+                <button
+                    class="w-10 h-16 bg-[#ffde59] flex items-center justify-center text-[#111111] hover:bg-[#ffde59]/90 transition-colors">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+            </div>
+
+            <div class="max-w-4xl mx-auto flex flex-col items-center text-center">
+
+                <div class="mb-10">
+                    <i class="fa-solid fa-quote-right text-4xl text-[#ffde59]"></i>
+                </div>
+
+                <p class="text-white text-lg md:text-xl font-medium leading-[1.8] mb-12 px-4">
+                    I just made a public announcement here at the office that if there was such a award for Vendor of
+                    the Year, you would receive it. We would all vote for you. Very demanding HUGE customer, and you
+                    have just went above and beyond!
+                </p>
+
+                <div class="flex flex-col items-center">
+                    <img src="imgs/q2.jpg" alt="John Doe"
+                        class="w-16 h-16 rounded-full border-2 border-white/20 mb-4 object-cover">
+                    <h5 class="text-white font-bold text-base mb-1">John Doe</h5>
+                    <p class="text-[#ffde59] text-[10px] font-bold uppercase tracking-widest">Businessman</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#ffde59] py-12 overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="flex flex-wrap items-center justify-center lg:justify-between gap-8 md:gap-12 opacity-80">
+
+                <div class="flex items-center space-x-2">
+                    <img src="imgs/logo-mark-1.png" alt="Client logo" class="h-16 grayscale brightness-0">
+                    <span class="text-[#111111] font-bold text-[20px] uppercase tracking-tighter">ChainFactory</span>
+                </div>
+
+                <div class="flex items-center space-x-2">
+                    <img src="imgs/logo-mark-1.png" alt="Client logo" class="h-16 grayscale brightness-0">
+                    <span class="text-[#111111] font-bold text-[20px] uppercase tracking-tighter">ChainFactory</span>
+                </div>
+
+                <div class="flex items-center space-x-2">
+                    <img src="imgs/logo-mark-1.png" alt="Client logo" class="h-16 grayscale brightness-0">
+                    <span class="text-[#111111] font-bold text-[20px] uppercase tracking-tighter">ChainFactory</span>
+                </div>
+
+                <div class="flex items-center space-x-2">
+                    <img src="imgs/logo-mark-1.png" alt="Client logo" class="h-16 grayscale brightness-0">
+                    <span class="text-[#111111] font-bold text-[20px] uppercase tracking-tighter">ChainFactory</span>
+                </div>
+
+    </section>
+
+    <footer class="relative bg-[url('imgs/footer.jpg')] bg-cover bg-center text-white overflow-hidden">
+        <div class="absolute inset-0 z-0"></div>
+
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 relative z-10 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+                <div class="lg:col-span-5">
+                    <h4 class="text-[#ffde59] font-bold text-lg mb-8">About Our Company</h4>
+                    <p class="text-gray-300 text-sm leading-[1.8] mb-10 max-w-md">
+                        XTRA WordPress theme is the last theme you will ever have to buy for your business. More
+                        powerful and easy to use than any other themes on the market with incredible features and
+                        friendly support.
+                    </p>
+
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="w-10 h-10 bg-[#ffde59] flex items-center justify-center text-[#111111] shrink-0">
+                                <i class="fa-solid fa-location-dot text-sm"></i>
+                            </div>
+                            <span class="text-sm font-bold">22345, California, LA, USA</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="w-10 h-10 bg-[#ffde59] flex items-center justify-center text-[#111111] shrink-0">
+                                <i class="fa-solid fa-phone text-sm"></i>
+                            </div>
+                            <span class="text-sm font-bold">001 (818) 33 44 555</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div
+                                class="w-10 h-10 bg-[#ffde59] flex items-center justify-center text-[#111111] shrink-0">
+                                <i class="fa-solid fa-envelope text-sm"></i>
+                            </div>
+                            <span class="text-sm font-bold">support@xtraindustrial.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <h4 class="text-[#ffde59] font-bold text-lg mb-8 text-center lg:text-left">Useful links</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-y-3 gap-x-8">
+                        <div class="flex flex-col space-y-3 items-center lg:items-start">
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Industrial</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Our Reviews</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Environmental</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Our Projects</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>General enquiries</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Get In Touch</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Support Center</span>
+                            </a>
+                        </div>
+                        <div class="flex flex-col space-y-3 items-center lg:items-start">
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Equipment</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Construction</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>About Us</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Contact Us</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Schedule a callback</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Xtra Reviews</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Privacy Policy</span>
+                            </a>
+                        </div>
+                        <div class="flex flex-col space-y-3 items-center lg:items-start">
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Engineering</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Factory Tools</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>News, Updates</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Career Tips</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>General FAQ's</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center lg:justify-start space-x-2 text-gray-300 hover:text-[#ffde59] transition-colors text-[13px]">
+                                <i class="fa-solid fa-link text-[10px] opacity-40"></i>
+                                <span>Other Services</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="bg-[#0b2b5b] border-t-[6px] border-[#ffde59] py-10 relative">
+            <div class="container mx-auto px-6 md:px-12 lg:px-24 flex items-center gap-12">
+
+
+                <div class="flex flex-col md:flex-row items-center justify-between w-full gap-6">
+                    <p class="text-gray-400 text-[10px] font-bold tracking-widest">
+                        © Copyright 2026. All Rights Reserved XtraTheme
+                    </p>
+                    <div
+                        class="flex items-center space-x-6 text-white text-[10px] font-bold uppercase tracking-widest mr-32 lg:mr-48">
+                        <a href="#" class="hover:text-[#ffde59] transition-colors">Industrial Solutions</a>
+                        <span class="w-4 h-[1px] bg-white/20"></span>
+                        <a href="#" class="hover:text-[#ffde59] transition-colors">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="fixed bottom-5 left-5 w-16 h-16 bg-[#ffde59] rounded-full flex items-center justify-center shadow-2xl cursor-pointer hover:scale-110 transition-transform z-[9999]">
+                <i class="fa-solid fa-comment text-3xl text-[#111111]"></i>
+            </div>
+
+            <div class="fixed bottom-5 right-5 gap-2 flex z-[9999]">
+                <button
+                    class="w-12 h-12 bg-white flex items-center justify-center text-[#111111] hover:bg-gray-100 transition-colors">
+                    <i class="fa-regular fa-comment-dots text-xl"></i>
+                </button>
+                <button
+                    class="w-12 h-12 bg-white border-l border-gray-100 flex items-center justify-center text-[#111111] hover:bg-gray-100 transition-colors">
+                    <i class="fa-solid fa-arrow-up text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
 </html>
+

@@ -1,5 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.slant-left-blue {
+    clip-path: polygon(40px 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.slant-right-yellow {
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
+}
+
 .hero-bg {
-    background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-image: url('imgs/industrial-slider-1-1.jpg');
     background-size: cover;
     background-position: center;
+}
+
+
+@keyframes reveal-header {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+#sticky-header {
+    animation: reveal-header linear both;
+    animation-timeline: scroll();
+    animation-range: 0 150px;
 }
